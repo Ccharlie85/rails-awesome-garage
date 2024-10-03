@@ -1,7 +1,7 @@
   <h2><%=car.brand %></h2>
   <h3><%=car.model %></h3>
-  <p><%= car.created_at.strftrime("%a %b %e at %l%M %p") %></p>
-  <div><%=car.owner.nickname %></div>
+  <p><%= car.fuel %></p>
+  <p><%= car.year %></p>
 
 <div>
   <%= simple_form_for [@car, @review] do |f| %>
@@ -16,6 +16,10 @@
 <p><%= "⭐" review.rating %></p>
 <% end %>
 
-<%= simple_form_for [@car, @favourite] do |f| %>
-  <%= f.submit "Save to my Garage" %>
+<%= if @car.favourites.empty? %>
+  <%= simple_form_for [@car, @favourite] do |f| %>
+    <%= f.submit "Save to my Garage" %>
+  <% end %>
+<% else %>
+  <p>This car is in your garage!</p>
 <% end %>

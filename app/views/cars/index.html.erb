@@ -1,8 +1,5 @@
-# Display all the cars with their brand and mode
-<%= @cars.each do |car| %>
-  <h2><%=car.brand %></h2>
-  <h3><%=car.model %></h3>
-  <p><%= car.created_at.strftrime("%a %b %e at %l%M %p") %></p>
-  <div><%=car.owner.nickname %></div>
-  <%= link_to %>
+<%= @favourites.each do |favourite| %>
+<p><%= favourite.car.brand %></p>
+<p><%= favourite.car.model %></p>
+<% link_to "Unfavourite", favourite_path(favourite), data: {turbo_method: "delete", turbo_confirm: "Do you really want to take the #{favourite.car.model} out of the garage?"} %>
 <% end %>
