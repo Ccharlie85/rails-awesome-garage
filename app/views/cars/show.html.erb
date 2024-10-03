@@ -15,3 +15,7 @@
 <p><%= review.comment %></p>
 <p><%= "⭐" review.rating %></p>
 <% end %>
+
+<%= simple_form_for [@car, @favourite] do |f| %>
+  <%= f.submit "Save to my Garage" %>
+<% end %>
