@@ -1,0 +1,8 @@
+# Display all the cars with their brand and mode
+<%= @cars.each do |car| %>
+  <h2><%=car.brand %></h2>
+  <h3><%=car.model %></h3>
+  <p><%= car.created_at.strftrime("%a %b %e at %l%M %p") %></p>
+  <div><%=car.owner.nickname %></div>
+  <%= link_to %>
+<% end %>
