@@ -34,8 +34,12 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-# Add gem Simple Form
-gem "simple-form"
+# Use gem Simple Form, Font Awesome, Bootstrap, Autoprefixer, 
+gem "sassc-rails"
+gem "font-awesome-sass", "~> 6.1"
+gem "bootstrap", "~> 5.2"
+gem "simple_form"
+gem "autoprefixer-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
