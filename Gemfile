@@ -36,7 +36,7 @@ gem "bootsnap", require: false
 
 # Use gem Simple Form, Font Awesome, Bootstrap, Autoprefixer, 
 gem "sassc-rails"
-gem "font-awesome-sass", "~> 6.1"
+gem "font-awesome-sass", "~> 6.7"
 gem "bootstrap", "~> 5.2"
 gem "simple_form"
 gem "autoprefixer-rails"
